@@ -15,9 +15,10 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 import static android.content.res.Configuration.ORIENTATION_LANDSCAPE;
-import static com.example.pam_android.flicks.R.id.ivPoster;
-import static com.example.pam_android.flicks.R.id.tvTitle;
 
 /**
  * Created by PAM-Android on 10/5/2016.
@@ -25,10 +26,13 @@ import static com.example.pam_android.flicks.R.id.tvTitle;
 
 public class MovieAdapter extends ArrayAdapter<Movie> {
 
-    private static class ViewHolder {
-        ImageView poster;
-        TextView title;
-        TextView overfiew;
+    static class ViewHolder {
+        @BindView(R.id.ivPoster) ImageView poster;
+        @BindView(R.id.tvTitle) TextView title;
+        @BindView(R.id.tvOverview) TextView overfiew;
+        public ViewHolder(View view){
+            ButterKnife.bind(this,view);
+        }
     }
 
     public MovieAdapter(Context context, ArrayList<Movie> movies) {
@@ -41,22 +45,20 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
         Movie movie = getItem(position);
         ViewHolder viewHolder;
         if(convertView == null){
-            viewHolder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.item_movie,parent,false);
-            viewHolder.poster = (ImageView) convertView.findViewById(ivPoster);
-            viewHolder.title = (TextView) convertView.findViewById(tvTitle);
-            viewHolder.overfiew = (TextView) convertView.findViewById(R.id.tvOverview);
+            viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         if(getContext().getResources().getConfiguration().orientation == ORIENTATION_LANDSCAPE){
-            Picasso.with(getContext()).load(movie.getBackdropPath()).into(viewHolder.poster);
+            Picasso.with(getContext()).load(movie.getBackdropPath()).fit().centerCrop()
+                    .placeholder(R.drawable.no_movie_780x439).into(viewHolder.poster);
         } else {
-            Picasso.with(getContext()).load(movie.getPoster()).into(viewHolder.poster);
+            Picasso.with(getContext()).load(movie.getPoster())
+                    .placeholder(R.drawable.no_movie_342x513).into(viewHolder.poster);
         }
-
         viewHolder.title.setText(movie.getTitle());
         viewHolder.overfiew.setText(movie.getOverview());
         return convertView;
