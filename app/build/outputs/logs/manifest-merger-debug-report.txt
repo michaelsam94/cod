@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/AndroidManifest.xml:2:1-21:12
+ADDED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/AndroidManifest.xml:2:1-22:12
 	package
 		ADDED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/AndroidManifest.xml:3:5-45
 		INJECTED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/AndroidManifest.xml
@@ -18,7 +18,7 @@ ADDED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/Andro
 	android:name
 		ADDED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/AndroidManifest.xml:6:5-19:19
+ADDED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/AndroidManifest.xml:6:5-20:19
 MERGED from [com.android.support:appcompat-v7:24.2.0] /home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-vector-drawable:24.2.0] /home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:support-compat:24.2.0] /home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/AndroidManifest.xml:25:5-20
@@ -52,6 +52,10 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/AndroidManifest.xml:16:17-77
 	android:name
 		ADDED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/AndroidManifest.xml:16:27-74
+activity#com.example.pam_android.flicks.MovieDetailsActivity
+ADDED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/AndroidManifest.xml:19:9-57
+	android:name
+		ADDED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/AndroidManifest.xml:19:19-55
 uses-sdk
 INJECTED from /home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:24.2.0] /home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/AndroidManifest.xml:21:5-23:78

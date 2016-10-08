@@ -11,17 +11,42 @@ import java.util.ArrayList;
  */
 
 public class Movie {
+
+
     private String poster;
     private String backdropPath;
     private String title;
     private String overview;
+    private double popularity;
+    private double voteAverage;
+
 
     public Movie(JSONObject jsonObject) throws JSONException{
         this.poster = jsonObject.getString("poster_path");
         this.title = jsonObject.getString("original_title");
         this.overview = jsonObject.getString("overview");
         this.backdropPath = jsonObject.getString("backdrop_path");
+        this.popularity = jsonObject.getDouble("popularity");
+        this.voteAverage = jsonObject.getDouble("vote_average");
     }
+
+    public void setPopularity(double popularity) {
+        this.popularity = popularity;
+    }
+
+    public double getPopularity() {
+        return popularity;
+    }
+
+
+    public void setVoteAverage(double voteAverage) {
+        this.voteAverage = voteAverage;
+    }
+
+    public double getVoteAverage() {
+        return voteAverage;
+    }
+
 
     public String getPoster() {
         return String.format("https://image.tmdb.org/t/p/w342/%s", poster);

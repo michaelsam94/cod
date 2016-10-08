@@ -4,12 +4,12 @@
         "source": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable/abc_cab_background_top_material.xml"
     },
     {
-        "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable/abc_btn_colored_material.xml"
-    },
-    {
         "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
         "source": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
+        "source": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable/abc_btn_colored_material.xml"
     },
     {
         "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
@@ -22,6 +22,10 @@
     {
         "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/abc_ic_voice_search_api_material.xml",
         "source": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/movie_placeholder_780x439.jpg",
+        "source": "/home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/res/drawable/movie_placeholder_780x439.jpg"
     },
     {
         "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
@@ -60,8 +64,8 @@
         "source": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable/abc_ratingbar_small_material.xml"
     },
     {
-        "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/no_movie_342x513.jpg",
-        "source": "/home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/res/drawable/no_movie_342x513.jpg"
+        "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/movie_placeholder_342x513.jpg",
+        "source": "/home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/res/drawable/movie_placeholder_342x513.jpg"
     },
     {
         "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
@@ -130,10 +134,6 @@
     {
         "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
         "source": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.0/res/drawable/abc_cab_background_internal_bg.xml"
-    },
-    {
-        "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/no_movie.jpg",
-        "source": "/home/michael/AndroidStudioProjects/codepathFlicks/app/src/main/res/drawable/no_movie.jpg"
     },
     {
         "merged": "/home/michael/AndroidStudioProjects/codepathFlicks/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",

@@ -7,4 +7,5 @@
     <color name="moviesActivityBackground">#000000</color>
     <color name="movieTitle">#fff5f2</color>
     <color name="movieOverview">#fff5f2</color>
+    <color name="moviePopularity">#fff5f2</color>
 </resources>

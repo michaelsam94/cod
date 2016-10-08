@@ -53,14 +53,19 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         if(getContext().getResources().getConfiguration().orientation == ORIENTATION_LANDSCAPE){
-            Picasso.with(getContext()).load(movie.getBackdropPath()).fit().centerCrop()
-                    .placeholder(R.drawable.no_movie_780x439).into(viewHolder.poster);
+            viewHolder.poster.getLayoutParams().width = 780;
+            viewHolder.poster.getLayoutParams().height = 439;
+            viewHolder.poster.requestLayout();
+            Picasso.with(getContext()).load(movie.getBackdropPath())
+                    .placeholder(R.drawable.movie_placeholder_780x439).into(viewHolder.poster);
         } else {
             Picasso.with(getContext()).load(movie.getPoster())
-                    .placeholder(R.drawable.no_movie_342x513).into(viewHolder.poster);
+                    .placeholder(R.drawable.movie_placeholder_342x513).into(viewHolder.poster);
         }
         viewHolder.title.setText(movie.getTitle());
         viewHolder.overfiew.setText(movie.getOverview());
         return convertView;
     }
+
+
 }

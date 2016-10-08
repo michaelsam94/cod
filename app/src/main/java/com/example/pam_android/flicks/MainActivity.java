@@ -1,10 +1,12 @@
 package com.example.pam_android.flicks;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.pam_android.flicks.Adapters.MovieAdapter;
@@ -28,7 +30,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     MovieAdapter movieAdapter;
     ArrayList<Movie> movies;
     Handler mHandler;
@@ -44,6 +46,18 @@ public class MainActivity extends AppCompatActivity {
         movies = new ArrayList<>();
         movieAdapter = new MovieAdapter(this,movies);
         lvMovies.setAdapter(movieAdapter);
+        lvMovies.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Movie movie = movies.get(position);
+                Intent goToDetails = new Intent(MainActivity.this,MovieDetailsActivity.class);
+                goToDetails.putExtra("overview",movie.getOverview());
+                goToDetails.putExtra("popularity",movie.getPopularity());
+                goToDetails.putExtra("rate",movie.getVoteAverage());
+                startActivity(goToDetails);
+            }
+        });
+
         url = "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
         //getMoviesFromApiAsync(url);
         getMovieFromApiOkHttp(url);
@@ -58,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
+
 
     }
 
